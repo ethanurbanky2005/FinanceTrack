@@ -1,6 +1,14 @@
 # FinanceTrack
 
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A comprehensive financial management application built with Next.js and Supabase. Track your expenses, manage subscriptions, monitor tax liabilities, and more.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fethanurbanky2005%2FFinanceTrack&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY&demo-title=FinanceTrack&demo-description=Financial%20Management%20App&demo-url=https%3A%2F%2Ffinancetrack.vercel.app)
+
+[🔗 View Demo](https://financetrack.vercel.app) | [📖 Documentation](https://github.com/ethanurbanky2005/FinanceTrack/wiki) | [🐛 Report Bug](https://github.com/ethanurbanky2005/FinanceTrack/issues)
 
 ## Features
 
@@ -11,20 +19,22 @@ A comprehensive financial management application built with Next.js and Supabase
 - 📈 Budget tracking with visual representations
 - 🔒 Secure authentication with Supabase
 
-## Tech Stack
+## Quick Start
 
-- Next.js 14
-- TypeScript
-- Supabase (Authentication & Database)
-- Tailwind CSS
-- shadcn/ui Components
-- Recharts for data visualization
+### 1-Click Deploy
 
-## Getting Started
+The easiest way to deploy your own copy of FinanceTrack:
+
+1. Click the "Deploy with Vercel" button above
+2. Set up your Supabase project
+3. Configure the environment variables
+4. Deploy!
+
+### Local Development
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/financetrack.git
+git clone https://github.com/ethanurbanky2005/FinanceTrack.git
 cd financetrack
 ```
 
@@ -51,6 +61,15 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Tech Stack
+
+- [Next.js 14](https://nextjs.org/) - React Framework
+- [TypeScript](https://www.typescriptlang.org/) - Type Safety
+- [Supabase](https://supabase.com/) - Backend & Authentication
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [shadcn/ui](https://ui.shadcn.com/) - UI Components
+- [Recharts](https://recharts.org/) - Data Visualization
+
 ## Project Structure
 
 - `/app` - Next.js app router pages and layouts
@@ -62,7 +81,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions! Here's how you can help:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Support
+
+- 📫 [Email Support](mailto:support@financetrack.com)
+- 💬 [Discord Community](https://discord.gg/financetrack)
+- 📖 [Documentation](https://github.com/ethanurbanky2005/FinanceTrack/wiki)
 
 ## License
 
