@@ -107,6 +107,46 @@ create policy "Users can create own tax documents" on public.tax_documents for i
 create policy "Users can update own tax documents" on public.tax_documents for update using (auth.uid() = user_id);
 create policy "Users can delete own tax documents" on public.tax_documents for delete using (auth.uid() = user_id);
 
+-- Create bank_accounts table
+create table public.bank_accounts (
+  id uuid default uuid_generate_v4() primary key,
+  user_id uuid references public.profiles(id) on delete cascade not null,
+  institution_name text not null,
+  institution_id text not null,
+  item_id text not null,
+  status text not null check (status in ('active', 'disconnected')) default 'active',
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  updated_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- Create RLS policies for bank_accounts
+alter table public.bank_accounts enable row level security;
+create policy "Users can view own bank accounts" on public.bank_accounts for select using (auth.uid() = user_id);
+create policy "Users can insert own bank accounts" on public.bank_accounts for insert with check (auth.uid() = user_id);
+create policy "Users can update own bank accounts" on public.bank_accounts for update using (auth.uid() = user_id);
+create policy "Users can delete own bank accounts" on public.bank_accounts for delete using (auth.uid() = user_id);
+
+-- Create bank_transactions table
+create table public.bank_transactions (
+  id uuid default uuid_generate_v4() primary key,
+  user_id uuid references public.profiles(id) on delete cascade not null,
+  bank_account_id uuid references public.bank_accounts(id) on delete cascade not null,
+  transaction_id text not null,
+  amount decimal(12,2) not null,
+  description text,
+  category text,
+  date date not null,
+  pending boolean default false,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- Create RLS policies for bank_transactions
+alter table public.bank_transactions enable row level security;
+create policy "Users can view own bank transactions" on public.bank_transactions for select using (auth.uid() = user_id);
+create policy "Users can insert own bank transactions" on public.bank_transactions for insert with check (auth.uid() = user_id);
+create policy "Users can update own bank transactions" on public.bank_transactions for update using (auth.uid() = user_id);
+create policy "Users can delete own bank transactions" on public.bank_transactions for delete using (auth.uid() = user_id);
+
 -- Create functions to handle user management
 create or replace function public.handle_new_user()
 returns trigger as $$

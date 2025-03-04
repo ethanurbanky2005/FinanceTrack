@@ -15,6 +15,7 @@ import {
   ResponsiveContainer,
 } from "recharts"
 import { ArrowUpIcon, ArrowDownIcon, CreditCard, Calendar, PiggyBank } from "lucide-react"
+import { BankConnection } from "@/components/dashboard/bank-connection"
 
 export default function DashboardPage() {
   const { transactions, getTransactionsByDateRange } = useTransactions()
@@ -140,42 +141,46 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      <Card className="col-span-4">
-        <CardHeader>
-          <CardTitle>6 Month Overview</CardTitle>
-        </CardHeader>
-        <CardContent className="h-[400px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={monthlyData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Line
-                type="monotone"
-                dataKey="income"
-                stroke="#22c55e"
-                name="Income"
-                strokeWidth={2}
-              />
-              <Line
-                type="monotone"
-                dataKey="expenses"
-                stroke="#ef4444"
-                name="Expenses"
-                strokeWidth={2}
-              />
-              <Line
-                type="monotone"
-                dataKey="balance"
-                stroke="#6366f1"
-                name="Balance"
-                strokeWidth={2}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        </CardContent>
-      </Card>
+      <div className="grid gap-6 md:grid-cols-2 mb-8">
+        <BankConnection />
+        
+        <Card className="col-span-1">
+          <CardHeader>
+            <CardTitle>6 Month Overview</CardTitle>
+          </CardHeader>
+          <CardContent className="h-[400px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={monthlyData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Line
+                  type="monotone"
+                  dataKey="income"
+                  stroke="#22c55e"
+                  name="Income"
+                  strokeWidth={2}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="expenses"
+                  stroke="#ef4444"
+                  name="Expenses"
+                  strokeWidth={2}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="balance"
+                  stroke="#6366f1"
+                  name="Balance"
+                  strokeWidth={2}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }

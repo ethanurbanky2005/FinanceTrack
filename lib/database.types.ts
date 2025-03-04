@@ -35,6 +35,76 @@ export interface Database {
           updated_at?: string
         }
       }
+      bank_accounts: {
+        Row: {
+          id: string
+          user_id: string
+          institution_name: string
+          institution_id: string
+          item_id: string
+          status: 'active' | 'disconnected'
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          institution_name: string
+          institution_id: string
+          item_id: string
+          status?: 'active' | 'disconnected'
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          institution_name?: string
+          institution_id?: string
+          item_id?: string
+          status?: 'active' | 'disconnected'
+          created_at?: string
+          updated_at?: string
+        }
+      }
+      bank_transactions: {
+        Row: {
+          id: string
+          user_id: string
+          bank_account_id: string
+          transaction_id: string
+          amount: number
+          description: string | null
+          category: string | null
+          date: string
+          pending: boolean
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          bank_account_id: string
+          transaction_id: string
+          amount: number
+          description?: string | null
+          category?: string | null
+          date: string
+          pending?: boolean
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          bank_account_id?: string
+          transaction_id?: string
+          amount?: number
+          description?: string | null
+          category?: string | null
+          date?: string
+          pending?: boolean
+          created_at?: string
+        }
+      }
       categories: {
         Row: {
           id: string
