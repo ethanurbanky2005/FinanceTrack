@@ -3,12 +3,11 @@
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fethanurbanky2005%2FFinanceTrack&project-name=my-financetrack&repository-name=financetrack-personal&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY&env-description=API%20keys%20needed%20for%20Supabase%20configuration.%20Get%20them%20from%20your%20Supabase%20project%20settings.&demo-title=FinanceTrack&demo-description=Personal%20Financial%20Management%20App&demo-url=https%3A%2F%2Ffinancetrack-demo.vercel.app)
 
 A comprehensive financial management application built with Next.js and Supabase. Track your expenses, manage subscriptions, monitor tax liabilities, and more.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fethanurbanky2005%2FFinanceTrack&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY&demo-title=FinanceTrack&demo-description=Financial%20Management%20App&demo-url=https%3A%2F%2Ffinancetrack.vercel.app)
-
-[🔗 View Demo](https://financetrack.vercel.app) | [📖 Documentation](https://github.com/ethanurbanky2005/FinanceTrack/wiki) | [🐛 Report Bug](https://github.com/ethanurbanky2005/FinanceTrack/issues)
+[🔗 View Demo](https://financetrack-demo.vercel.app) | [📖 Documentation](https://github.com/ethanurbanky2005/FinanceTrack/wiki) | [🐛 Report Bug](https://github.com/ethanurbanky2005/FinanceTrack/issues)
 
 ## Features
 
